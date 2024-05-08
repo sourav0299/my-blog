@@ -26,6 +26,12 @@
                 @foreach($posts as $post)
                     <div>{{$post['title']}}</div>
                     {{$post['body']}}
+                    <p><a href="/edit-post/{{$post->id}}">Edit</a></p>
+                    <form action="/delete-post/{{$post->id}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button>Delete</button>
+                    </form>
                 @endforeach
         </div>
     @else
