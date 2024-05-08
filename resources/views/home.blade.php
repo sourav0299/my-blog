@@ -4,6 +4,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        button {
+            margin-bottom: 10px;
+            display: block;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        div {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     @auth
@@ -45,7 +90,9 @@
             <button>Register</button>
         </form>
     </div>
-    <h2>Login</h2>
+    <p>OR</p>
+    <div>
+        <h2>Login</h2>
         <form action="/login" method="POST">
             @csrf
             <input name="loginname" type="text" placeholder="name">
@@ -54,6 +101,5 @@
         </form>
     </div>
     @endauth
-    
 </body>
 </html>
