@@ -21,6 +21,13 @@
                 <button>Create Post</button>
             </form>
         </div>
+        <div>
+            <h2>All Posts</h2>
+                @foreach($posts as $post)
+                    <div>{{$post['title']}}</div>
+                    {{$post['body']}}
+                @endforeach
+        </div>
     @else
     <div>
         <h2>Register</h2>
