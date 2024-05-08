@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+    @auth
+        <p>Successfully Registered</p>
+    @else
     <div>
         <h2>Register</h2>
         <form action="/register" method="POST">
@@ -16,5 +19,7 @@
             <button>Register</button>
         </form>
     </div>
+    @endauth
+    
 </body>
 </html>
